@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
+import propTypes from 'prop-types';
 
-export const GifGridItem = ({ id, title, url }) => {
+export const GifGridItem = ({ title, url }) => {
     return (
         <div className="card animate__animated animate__bounce">
             <img src={ url } alt={ title }/>
@@ -9,3 +10,7 @@ export const GifGridItem = ({ id, title, url }) => {
     )
 }
 
+GifGridItem.propTypes = {
+    title:propTypes.string.isRequired,
+    url:propTypes.string.isRequired
+}
